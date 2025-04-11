@@ -136,7 +136,7 @@ export default function SignIn() {
         <FormDivider />
         <SignInButtons
           buttonTextPrefix="Sign in"
-          callbackUrl="/dashboard"
+          callbackUrl="/"
           onError={() => { }}
         />
         <p className="text-center text-[#DADADA] text-sm mt-2">

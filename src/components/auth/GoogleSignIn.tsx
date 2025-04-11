@@ -16,7 +16,7 @@ interface GoogleSignInProps {
 
 const GoogleSignIn: React.FC<GoogleSignInProps> = ({
   buttonText = 'Sign in with Google',
-  callbackUrl = "/api/auth/callback/google"
+  callbackUrl = "/"
 }) => {
   const dispatch = useDispatch();
   const router = useRouter();

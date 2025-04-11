@@ -12,7 +12,7 @@ interface SignInButtonsProps {
 
 const SignInButtons: React.FC<SignInButtonsProps> = ({
     buttonTextPrefix = 'Sign in',
-    callbackUrl = "/" // Added default callbackUrl
+    callbackUrl = "/" // Reverted default callback to /
 }) => {
     return (
         <div className="space-y-3 w-full">

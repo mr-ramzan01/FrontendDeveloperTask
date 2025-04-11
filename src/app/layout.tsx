@@ -4,8 +4,9 @@ import "./globals.css";
 
 import { Source_Sans_3 } from 'next/font/google';
 import { Provider } from "react-redux";
-import { store } from "@/redux/store";
+import { store, persistor } from "@/redux/store";
 import { SessionProvider } from "next-auth/react";
+import { PersistGate } from 'redux-persist/integration/react';
 
 const sourceSans = Source_Sans_3({
   weight: '400',
@@ -27,9 +28,11 @@ export default function RootLayout({
       <body className={`${sourceSans.className} bg-[#17181E] text-white`}>
         <SessionProvider>
           <Provider store={store}>
-            <Banner>
-              {children}
-            </Banner>
+            <PersistGate loading={null} persistor={persistor}>
+              <Banner>
+                {children}
+              </Banner>
+            </PersistGate>
           </Provider>
         </SessionProvider>
       </body>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import GoogleSignIn from '../auth/GoogleSignIn';
-// import MicrosoftSignIn from '../auth/MicrosoftSignIn'; // Commented out
+import MicrosoftSignIn from '../auth/MicrosoftSignIn';
 
 interface SignInButtonsProps {
     buttonTextPrefix?: string;
@@ -22,9 +22,9 @@ const SignInButtons: React.FC<SignInButtonsProps> = ({
                 callbackUrl={callbackUrl} // Pass callbackUrl
             />
 
-            {/* <MicrosoftSignIn
+            <MicrosoftSignIn
                 buttonText={`${buttonTextPrefix} with Microsoft`}
-            /> */}
+            />
         </div>
     );
 };

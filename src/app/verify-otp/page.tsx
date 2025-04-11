@@ -177,6 +177,7 @@ export default function VerifyOtp() {
                             />
                         ))}
                     </div>
+                    <p className="text-xs text-[#A0A0A0] text-center">Your otp is {localStorage.getItem("signupOTP") || localStorage.getItem("resetOTP")}</p>
                     {otpError && <p className="text-red-500 text-xs text-center mt-1">{otpError}</p>}
                     {
                         time <= 0 ? (
@@ -196,7 +197,7 @@ export default function VerifyOtp() {
                         )
                     }
                     <Button type="submit" loading={isSubmitting}>
-                        Verify & Continue
+                        Continue
                     </Button>
                 </form>
             )}

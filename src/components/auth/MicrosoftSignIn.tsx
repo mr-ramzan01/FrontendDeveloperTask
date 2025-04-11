@@ -57,6 +57,7 @@ const MicrosoftSignIn: React.FC<MicrosoftSignInProps> = ({
     <Button
       variant="social" 
       type="button" 
+      disabled={true}
       onClick={handleMicrosoftSignIn}
       icon={<BsMicrosoft size={20} />}
     >

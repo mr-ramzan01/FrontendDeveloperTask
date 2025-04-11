@@ -42,7 +42,6 @@ export const userSlice = createSlice({
       state.isAuthenticated = false;
       state.user = null;
       // Clear relevant localStorage on logout
-      localStorage.removeItem('users');
       localStorage.removeItem('signupOTP');
       localStorage.removeItem('signupEmail');
       localStorage.removeItem('resetOTP');
